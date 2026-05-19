@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                        echo "=== Information about disks ==="
+                        echo "=== disc information ==="
                         df -h
                     '''
                 }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                        echo "=== Process with highest memory usage ==="
+                        echo "=== The process with maximum memory usage ==="
                         ps aux --sort=-%mem | awk 'NR==2 {print $11}'
                     '''
                 }
